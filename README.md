@@ -1,6 +1,11 @@
-edugame-railway-operation
+Interactive Signalling Laboratory - Handbook
 ======
 [![DOI](https://zenodo.org/badge/246667488.svg)](https://zenodo.org/badge/latestdoi/246667488)
+
+Version 1.0.2
+------
+Fixing minor errors
+
 
 Version 1.0.1
 ------
@@ -70,11 +75,3 @@ Version 0.1
 ------
 
 created first papercut prototype with driving dynamics.
-
-Roadmap
-------
-
-* translate handbook 1.0 from german to english
-* extend game with train numbers
-* extend game with dispatching
-* extend game with simulations of malfunctions and disruptions
