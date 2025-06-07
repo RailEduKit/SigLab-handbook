@@ -1,0 +1,23 @@
+name: zenodo
+on:
+  # Trigger when you publish a release via GitHub's release page
+  release:
+    types:
+      - published
+
+jobs:
+  publish:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout the contents of your repository
+          uses: actions/checkout@v4
+        - name: Create a snapshot of your repository contents
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ZENODO_ACCESS_TOKEN: ${{ secrets.ZENODO_ACCESS_TOKEN }}
+          uses: zenodraft/action@0.13.3
+          with:
+            concept: 6243948
+            metadata: .zenodo.json
+            publish: true
+            sandbox: false
