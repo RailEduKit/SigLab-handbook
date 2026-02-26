@@ -26,7 +26,10 @@
   ..content)
 }
 
-#table(columns: (auto, auto, auto), stroke: none,
+#table(
+  columns: (auto, auto, auto), 
+  stroke: none,
+  fill: (rgb("EAF2F5"), none),
 [
   #list_picture_right((
     [1],
@@ -154,7 +157,10 @@
 
 /* ************************************************ */
 
-#table(columns: (auto, auto, auto), stroke: none,
+#table(
+  columns: (auto, auto, auto), 
+  stroke: none,
+  fill: (rgb("EAF2F5"), none),
 [
   #list_picture_left((
     [#image("images/old_set/Zug_nahverkehr.png")],
