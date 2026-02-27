@@ -29,7 +29,7 @@
   [
     #list_picture_right(
       column_width:(1cm, 5cm, 3cm), 
-      first_fill: calc.odd,(
+      first_fill: calc.even,(
       [1x],
       [Nahverkehrszug],
       [#image("images/old_set/Zug_nahverkehr.png")],
@@ -116,7 +116,7 @@
   [
     #list_picture_right(
       column_width: (1cm, 2.5cm, 3cm),
-      first_fill: calc.odd,(
+      first_fill: calc.even,(
       [60x],
       [Gerade],
       [#image("images/old_set/gerade.png")],
