@@ -32,15 +32,15 @@
       first_fill: calc.even,(
       [1x],
       [Nahverkehrszug],
-      [#image("images/old_set/Zug_nahverkehr.png")],
+      [#image("images/sigLab_s-Bahn.png")],
 
       [1x],
       [Fernverkherszug],
-      [#image("images/old_set/Zug_fernverkehr.png")],
+      [#image("images/sigLab_Zug.png")],
 
       [1x],
       [Güterzug],
-      [#image("images/old_set/Zug_gueter.png")],
+      [#image("images/sigLab_Güterzug.png")],
 
       [3x],
       [Zugspitzensignal],
@@ -100,15 +100,15 @@
 
       [2x],
       [Geschwindigkeitsregler],
-      [#image("images/locking_pin_isometric.png", width: 35%)],
+      [#image("images/speed_controller_isometric.png", width: 35%)],
 
       [2x],
       [Fahrdynamikbrett],
-      [#image("images/old_set/klemmbrett.png")],
+      [#image("images/sigLab_klemmbrett.png", width: 120%)],
 
       [3x],
       [Fahrdynamikzettel],
-      [Bild],
+      [#image("images/Fahrdynamikzettel_bundle.png")],
 
     ))
   ],
@@ -119,39 +119,43 @@
       first_fill: calc.even,(
       [60x],
       [Gerade],
-      [#image("images/old_set/gerade.png")],
+      [#align(right,
+        image("images/sigLab_gerade.png", width: 134%)
+      )],
 
       [10x],
       [Bogen],
-      [#image("images/old_set/Bogen2.png")],
+      [#image("images/sigLab_kurve.png")],
 
       [2x],
       [Weiche],
-      [#image("images/old_set/weiche1.png", width: 160%)],
+      [#image("images/siglab_Weiche1.png", width: 100%)],
 
       [2x],
       [Weiche],
-      [#image("images/old_set/weiche2.png", width: 160%)],
+      [#image("images/siglab_Weiche2.png", width: 100%)],
 
       [10x],
       [Bahnsteig],
-      [#image("images/old_set/Bahnsteig.png")],
+      [#image("images/sigLab_Bahnsteig.png")],
+
+      [3x],
+      [Deko Bahnsteig],
+      [#image("images/Grafik Bahnsteig Deko für Materialliste.png")],
 
       [2x],
       [Rampe],
-      [#image("images/old_set/rampe.png")],
+      [#image("images/sigLab_Einfahrt.png")],
 
       [2x],
       [Prellbock],
-      [#image("images/old_set/prellbock_1.png")],
+      [#image("images/sigLab_prellbock.png")],
 
       [1x],
       [Handbuch],
-      [Bild],
+      [#image("images/sigLab_Mappe.png")],
 
-      [],
-      [],
-      []
+
     ))
   ],
   
