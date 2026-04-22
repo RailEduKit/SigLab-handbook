@@ -135,11 +135,11 @@
       [Weiche],
       [#image("images/siglab_Weiche2.png", width: 100%)],
 
-      [10x],
-      [Bahnsteig],
+      [6x],
+      [Bahnsteig-\ element],
       [#image("images/sigLab_Bahnsteig.png")],
 
-      [3x],
+      [6x],
       [Deko Bahnsteig],
       [#image("images/Grafik Bahnsteig Deko für Materialliste.png")],
 
