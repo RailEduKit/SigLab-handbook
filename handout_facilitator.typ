@@ -50,7 +50,7 @@ schiebt den Zug. Enge Abstimmung mit dem Triebfahrzeugführer
 
 - Die *Ausgangssituation* muss aufgebaut werden
 - Ein Bahnsteig besteht aus zwei *Bahnsteigelementen*
-- Der Bahnsteig kann drei Felder lang sein. Die genaue Position ist nicht relevant. Entweder ein Feld vorne dranhängen (10 bis 12) oder ein halbes Feld vorne und hinten überlappen (10.5 bis 13.5)
+- Der Bahnsteig kann drei Felder lang sein. Die genaue Position ist nicht relevant. Entweder um ein Feld vorne erweitern (10 bis 12) oder ein halbes Feld vorne und hinten überlappen (10.5 bis 13.5)
 - Ausgangssituation: hier sollten die Bahnsteige einfach auch drei Felder lang sein
 
 Runde 7 in dem Tutorial ist wichtig. Die Nullrunde: Man setzt den Geschwindigkeitsregler auf Null. Auf der Infrastruktur passiert nichts, aber der Rundenzähler wird um 1 erhöht. Bei zukünftigen Be-rechnungen führt diese Runde manchmal zu verwirrungen.
