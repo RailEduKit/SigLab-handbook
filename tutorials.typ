@@ -27,7 +27,7 @@ Bei dem Thema Fahrdynamik besteht eine Runde aus folgenden Phasen:
 
 
 === Aufgabe
-// TODO ergänze eine Aufgabe
+Der Nahverkehrszug soll möglichst schnell zum nächsten Haltepunkt fahren und dort zum halten kommen. Wie viele Runden werden dafür benötigt?
 
 === Lösung
 
