@@ -48,20 +48,18 @@ Ab hier sollte keine Einführung mehr nötig sein. Das Handbuch führt durch das
 - *Aufgaben rechnerisch lösen*
   - Es ist möglich die Aufgaben rechnerisch zu lösen. Es macht auch Sinn sich vorher dazu Gedanken zu machen. Ob die Berechnung stimmt kann dann durch ausprobieren geprüft werden.
 
-== Vermittlungsziele
 
-*überarbeiten*
-- fahren auf Sicht -> man kann nur sehr langsam fahren
-- Bremsweg Berechnung 160km/h vollbahn
-- Bremswegberechnung Straßenbahn 3m/s^2 (Braunschweig) Gefahrenbremsung
-- je nach sicht kann man verschieden schnell weit gucken/ schnell fahren
-- Straßenbahn fährt auf Sicht im Stadtverkehr (unvorhergesehene Hindernisse)
-- Bei Eisenbahnen ist fahren auf Sicht nicht möglich
-- Haftbeiwert bei Autos vs Schine
+== Aufgabe 1.1
+=== Vermittlungsziele
+- Spieldynamik kennenlernen
+  - Der Nahverkehrszug kann direkt auf 2 F/R beschleunigen
+- Berechnung von Bremsweglänge
+- Die Infrastruktur vor und nach einem Betrachtungsraum ist beliebig. Ein Zug kann auch mit voller Geschwindigkeit in den Betrachtungsraum einbrechen.
+- Je länger ein Zug ist, desto mehr Runden werden benötigt, bis der gesamte Zug die Strecke verlassen hat.
 
 
-== Lösungen
-=== Aufgabe 1.1
+=== Lösung
+
 #table(columns: (auto,auto), stroke: none,
 [a)],
 [Runde 9, Feld 26, wenn von 0 F/R direkt auf 2 F/R beschleunigt wird\
@@ -100,19 +98,53 @@ Runde 9, Feld 24, wenn von 0 F/R auf 1 F/R und erst dann auf 2 F/R beschleunigt 
 *0 F/R - Runde 19, Feld 38 - Halt an Bahnsteig C\
 0 F/R - Runde 20, Feld 38 - Fahrgastwechsel*
 
-#underline[Variante 2 halten auf Feld 15 am Bahnsteig B]
+#underline[Variante 2 halten auf Feld 15 am Bahnsteig B]\
 2 F/R - Runde 5, Feld 13 - Bremsung eingeleitet\
 1 F/R - Runde 6, Feld 14 - bremsen\
 1 F/R - Runde 7, Feld 15 - rollen 
 0 F/R - Runde 8, Feld 15 - Halt an Bahnsteig B\
 0 F/R - Runde 8, Feld 15 - Fahrgastwechsel\
 2 F/R - Runde 9, Feld 17 - Beschleunigung\
-*das ist noch nicht fertig*
+#text(fill: red, [Fertigstellen])
 
- ])
+ ],
+
+[c)],
+[$"Runden gesamt" ["Runden"] = ("Streckenlänge" + "Zuglänge" ["Felder"]) / ("Maximale Geschwindigkeit" ["Felder"/"Runde"])$\
+  Nahverkehrszug: $(39 + 2) / 3 = 13,67 -> 14 "Runden"$\
+  Fernverkehrszug: $(39 + 4) / 5 = 8,6 -> 9 "Runden"$\
+  Güterzug: $(39 + 6) / 3 = 15 "Runden"$])
 
 === Aufgabe 1.2
+=== Vermittlungsziele
+- Geringe Haftreibung von Stahl auf Stahl (anders als Gummi auf Asphalt)
+  - Wenig Energieverbrauch
+  - Lange Bremswege
+- Fahren auf Sicht -> Um Kollisionen zu vermeiden muss ein Zug sehr langsam fahren
+- Straßebahnen fahren im Straßenverkehr auf Sicht
+  - Je nach sicht können sie unterschiedlich schnell fahren
+  - Für besseres Bremsvermögen: Schienen sanden und Magnetschienenbremsen
+    - 1 bis 3 m/s^2 negative Beschleunigung (in Braunschweig)
+  - Geringe Geschwindigkeiten - akzeptable Bremsweglänge
+Für Eisenbahnen ist fahren auf Sicht nicht möglich
 
+=== Lösung
+
+#table(columns: (auto,auto), stroke: none,
+[a)],
+[Ist der Bremsweg länger als die Sichtweite, wird der Zug immer mit dem Hinderniss kollidieren\
+Wird auf Sicht gefahren ist die Fahrtzeit deutlich länger, als wenn mit maximalgeschwindigkeit gefahren wird.],
+
+[b)],
+[Sehr gute Sicht:\
+Nah- und Fernverkehrszug: 2F/R
+Güterzug: 1F/R
+
+// Es muss der Punkt beachtet werden, wenn der Zug das Hindernis nicht sieht, noch einmal fährt und dadurch den optimalen Bremspunkt überfahren hat.
+],
+
+[c)],
+[])
 
 = Zugfolgesicherung
 *Überleitung zu diesem KApitel (Überarbeiten)*
