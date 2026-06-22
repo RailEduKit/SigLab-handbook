@@ -122,45 +122,82 @@ Runde 9, Feld 24, wenn von 0 F/R auf 1 F/R und erst dann auf 2 F/R beschleunigt 
   - Lange Bremswege
 - Fahren auf Sicht -> Um Kollisionen zu vermeiden muss ein Zug sehr langsam fahren
 - Straßebahnen fahren im Straßenverkehr auf Sicht
-  - Je nach sicht können sie unterschiedlich schnell fahren
   - Für besseres Bremsvermögen: Schienen sanden und Magnetschienenbremsen
-    - 1 bis 3 m/s^2 negative Beschleunigung (in Braunschweig)
-  - Geringe Geschwindigkeiten - akzeptable Bremsweglänge
-Für Eisenbahnen ist fahren auf Sicht nicht möglich
+    - 1 bis 3 $m/s^2$ negative Beschleunigung (in Braunschweig) //TODO Werte überprüfen
+  - Geringe Geschwindigkeiten - akzeptable Bremsweglänge (aber immernoch länger als bei Autos!)
+- Für Eisenbahnen ist fahren auf Sicht nicht möglich
+  - Die hohen Geschwindigkeiten führen zu zu langen Bremswegen
 
 === Lösung
 
 #table(columns: (auto,auto), stroke: none,
 [a)],
 [Ist der Bremsweg länger als die Sichtweite, wird der Zug immer mit dem Hinderniss kollidieren\
-Wird auf Sicht gefahren ist die Fahrtzeit deutlich länger, als wenn mit maximalgeschwindigkeit gefahren wird.],
+Wird auf Sicht gefahren ist die Fahrtzeit deutlich länger, als wenn mit Maximalgeschwindigkeit gefahren wird.],
 
 [b)],
 [Sehr gute Sicht:\
-Nah- und Fernverkehrszug: 2F/R
+Nah- und Fernverkehrszug: 2F/R\
 Güterzug: 1F/R
+
+Normale Sicht:\
+Nah- und Fernverkehrszug: 1F/R\
+Güterzug: nicht möglich
+
+Schlechte Sicht:\
+Nah- und Fernverkehrszug: 1F/R\
+Güterzug: nicht möglich
 
 // Es muss der Punkt beachtet werden, wenn der Zug das Hindernis nicht sieht, noch einmal fährt und dadurch den optimalen Bremspunkt überfahren hat.
 ],
 
 [c)],
-[])
+[#text(fill: gray)[#underline([Warum 7 Felder Sichtweite nicht reichen:])]\
+  Optimalfall: 6 Felder Bremsweg in 4 Runden $->$ Das Hindernis darf auf dem 7. Feld liegen $->$ 7 Felder Sichtweite.\
+Der Optimalfall liegt nur dann vor, wenn der Zug 7 Felder vor dem Hindernis entscheiden kann zu Bremsen. Der Zug kann aber nur alle 4 Feler anfangen zu bremsen. Es würde weiterhin zu einem Unfall kommen, wenn der Zug 8 Felder vor dem Hindernis erneut 4 Felder fährt, da das Hindernis noch nicht gesehen wird.\
+*Die Sichtweite muss länger als der Bremsweg sein.*\
+
+#text(fill: gray)[#underline([Herleitung für die nötige Sichtweite])]\
+Nehmen wir an das Hindernis liegt auf Feld 11.\
+Der Optimalfall tritt ein, wenn die Zugspitze auf Feld 4 steht und anfangen kann zu bremsen.\
+4 Felder weiter vorne (eine ganze Runde früher) steht die Zugspitze auf Feld 0. Die Sichtweite müsste 11 Felder betragen, um das Hindernis sehen zu können. Der Zug könnte aber noch eine Runde Runde mit 4F/R weiterfahren und erst auf Feld 4 Anfangen zu bremsen (Der Optimalfall). \
+_Der worst case tritt ein_, wenn sich die Zugposition um ein Feld nach vorne verschiebt:
+Das Hindernis liegt weiterhin auf Feld 11. Steht die Zugspitze auf Feld 1 und der Zug entscheidet sich nicht zu bremsen, könnte das nächste mal erst auf Feld 5 angefangen werden zu Bremsen - es würde zu einem Unfall kommen.
+Deswegen muss der Zug auf Feld 1 das Hindernis sehen können, um rechtzeitig anzufangen zu bremsen.\
+*Die Sichtweite muss somit 10 betragen.*
+// TODO: Grafik erstellen
+
+$"nötige Sichtweite" = "Bremsweg" + ("aktuelle Geschwindigkeit" - 1) + 1 = "Bremsweg" + "aktuelle Geschwindigkeit"$\
+(Die +1 wird für das Feld auf dem das Hindernis liegt benötigt.)
+
+In der Realität kann sich natürlich in jedem Moment dazu entschieden werden zu bremsen. Die Fahrt in voller Geschwindigkeit, kann allerdings mit der Reaktionszeit verglichen werden. 
+ ])
 
 = Zugfolgesicherung
-*Überleitung zu diesem KApitel (Überarbeiten)*
-- Fahren auf Sicht nicht möglich - wie könnte man Züge absichern?
-  - Blockeinteilung
-- Wie stellt man sicher, dass ein Zug vor dem HAuptsignal zum stehen kommt?
-  - Vorsignal
-- Wie stellt man technisch fest, dass ein Zug in einen Block ein- und vollständig wieder ausgefahren ist?
-  - Signalzugschlusstelle
-- Blockbedingungen
+*Überleitung zu diesem Kapitel*\
+Fahren auf Sicht ist bei hohen Geschwindigkeiten nicht möglich.
+- _Wie können Auffahrunfälle verhindert werden?_
+    - Fahren im festen Raumabstand
+    - Blockeinteilung
+- _Welche Bedingungen müssen erfüllt sein, damit ein Zug in einen Block einfahren darf?_
+  - Der vorrausfahrende Zug muss den Block vollständig verlassen haben
+  - Der vorrausfahrende Zug muss durch ein Halt zeigendes Signal gedeckt werden
+- _Wie kann eine Fahrt in einen Block autorisiert werden?_
+  - über Hauptsignale (signalgeführter Betrieb)
+  - (schriftliche Weisungen bei nicht signalgeführtem Betrieb)
+- Ein Halt zeigendes Hauptsignal darf nicht überfahren werden. Der Bremsweg ist aber länger als die Sichtweite. _Wie erfährt der Lokführer rechtzeititg von dem Halt zeigenden Hauptsignal?_
+  - Vorsignale
+  - Was ist der Vorsignalabstand im SigLab?
+    - 10 Felder
+- _Wie wird technisch festgestellt, dass ein Zug in einen Block ein- und vollständig wieder ausgefahren ist?_
+  - Signalzugschlusstelle (Achszähler oder Gleisstromkreise)
+  - Werden leicht hinter dem Hauptsignal angeordnet (50m, im Spiel ein Feld)
+  - Damit ein Block frei ist muss nicht nur der Block, sondern auch den dahinterliegenden Schutzabschnitt komplett freigefahren sein. 
 
 
-=> fahren im festen Raumabstand
 
-- Fernverkehrszug: 160km/h PZB, 200 km/h nur bei LZB (sonst ist Vorsignalabstand für langsamere Züge (z.B. Güterverkehr) unpraktisch)
-
+- Fernverkehrszug: 160km/h PZB, 200 km/h nur bei LZB (sonst ist Vorsignalabstand für langsamere Züge (z.B. Güterverkehr) unpraktisch)\
+-> zu den Vermittlungszielen der ersten Aufgabe zuordnen
 
 == Hinweise
 - erst beide Züge bewegen, dann auf die Sicherungstechnik achten
@@ -187,11 +224,15 @@ Folien
 - Bestandteile einer Sperrzeit
 - Sperrzeitentreppe
 
-== Lösungen
 
-=== Aufgabe 2.1
 
-=== Aufgabe 2.2
+== Aufgabe 2.1
+=== Vermittlungsziele
+=== Lösungen
+
+== Aufgabe 2.2
+=== Vermittlungsziele
+=== Lösungen
 
 #pagebreak()
 = Notizen erste Schulung

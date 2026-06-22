@@ -1,4 +1,6 @@
 
+#import "phase_overview.typ": *
+
 #let phase(content) = underline(content)//text(weight: "bold", content)
 #let instruction(content) = text(content)
 #let explanation(content) =  [#par(first-line-indent: 0.5cm, hanging-indent: 0.5cm)[#text(style: "italic", content)]]// h(1cm, text(style: "italic", content))
@@ -19,11 +21,15 @@
 === Phasen einer Runde
 Bei dem Thema Fahrdynamik besteht eine Runde aus folgenden Phasen:
 
-+ Schalthebelposition ändern
-    - Von jedem Zug kann die Schalthebelposition pro Runde einmal geändert werden. \ Der Schalthebel kann entlang der eingezeichneten Pfeile bewegt werden.
+#fahrdynamik_phasen()
+
+/* + Schalthebelposition ändern
+    - Von jedem Zug kann die Schalthebelposition pro Runde einmal geändert werden.
+    - Der Schalthebel kann entlang der eingezeichneten Pfeile bewegt werden.
+    - Diese Phase *für alle Züge durchführen*. Erst dann mit der nächsten Phase beginnen.
 + Züge bewegen
     - Alle Züge werden entsprechend der eingestellten Schalthebelposition nach vorne gesetzt.
-    - Die Runden- und Positionszähler werden erhöht.
+    - Die Runden- und Positionszähler werden erhöht. */
 
 
 === Aufgabe
@@ -126,3 +132,12 @@ Der Positionszähler wird in dieser Runde nicht erhöht und zeigt weiterhin 12 a
 
 
 *Der Nahverkehrszug ist nach 7 Runden an dem zweiten Bahnsteig zum halten gekommen. Er steht auf den Feldern 11 und 12.*
+
+= Zugfolgesicherung
+== Zugfolgesicherung Tutorial
+=== Rollen
+=== Material
+=== Funktionen des Fahrbrettes
+=== Ausgangssituation
+=== Phasen einer Runde
+#zugfolgesicherung_phasen_detail()
