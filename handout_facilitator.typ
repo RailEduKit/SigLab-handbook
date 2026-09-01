@@ -1,14 +1,16 @@
 
 #set par(leading: 0.8em)
+#set text(lang: "de")
 #show heading: set block(below: 1em)
 
-= SigLab Beginner Handout für Schulungsleitende
+
+= SigLab Beginner Handout für Schulungsleitende //fertig
 *Aufgabe der Schulungsleitung*\
 Grundsätzlich ist das SigLab darauf angelegt in Eigenarbeit bearbeitet werden zu können. Die Einführung also gerne kurz fassen. Die Teilnehmenden sollten möglichst schnell selber anfagen mit dem SigLab zu arbeiten.
 
 Die Aufgabe der Schulungsleitung besteht darin bei Fragen zur Verfügung zu stehen und den Gruppen immer wieder über die Schulter zu gucken, um mögliche Fehler aufzuzeigen und zu besprechen. 
 
-= Begrüßung und kurze Einführung
+= Begrüßung und kurze Einführung //fertig
 _Heute geht es um die Grundlagen des Bahnverkehrs. Die Schulung beschäftigt sich mit der Fahrdynamik von Zügen und den daraus entstandenen Sicherungskonzepten. Diese Themen werden mithilfe von einer modifizierten Holzeisenbahn erklärt. Dadurch werdet ihr den *Großteil der Zeit in Kleingruppen* arbeiten. Ich werde rumgehen und *stehe für Fragen zur Verfügung*._
 
 _Ihr werdet euch gleich in *Gruppen von 2-3 Personen* einteilen. Jede Gruppe wird eines der 4 Sets bekommen. Diese beinhalten alles was ihr für die heutige Schulung braucht. *Bitte achtet darauf die Sets nicht zu vermischen.*_
@@ -33,7 +35,7 @@ _In manchen Aufgaben gibt es *Entscheidungsspielraum*, der nicht klar definiert 
 = Fahrdynamik
 Ab hier sollte keine Einführung mehr nötig sein. Das Handbuch führt durch das Tutorial in das SigLab ein. In den nächsten Abschnitten sind Hinweise, Lösungen und Zusatzinformationen zu den einzelnen Aufgaben aufgeführt. Diese sollen helfen aufkommende Fragen zu beantworten.
 
-== Hinweise
+== Hinweise // fertig
 - *Vorschlag Rollenverteilung*
   - Spielleiter: liest die Aufgaben vor.
   - Triebfahrzeugführer: kümmert sich um das Fahrdynamikbrett.
@@ -54,12 +56,12 @@ Ab hier sollte keine Einführung mehr nötig sein. Das Handbuch führt durch das
 - Spieldynamik kennenlernen
   - Der Nahverkehrszug kann direkt auf 2 F/R beschleunigen
 - Berechnung von Bremsweglänge   
-- Die Infrastruktur vor und nach einem Betrachtungsraum ist beliebig. Ein Zug kann auch mit voller Geschwindigkeit in den Betrachtungsraum einbrechen.
+- Die Infrastruktur vor und nach einem Betrachtungsraum ist beliebig. // TODO Quelle finden 
+- Ein Zug kann auch mit voller Geschwindigkeit in den Betrachtungsraum einbrechen. // TODO Quelle finden
 - Je länger ein Zug ist, desto mehr Runden werden benötigt, bis der gesamte Zug die Strecke verlassen hat.
 
 
-=== Lösung
-
+=== Lösung // TODO Fertigstellen
 #table(columns: (auto,auto), stroke: none,
 [a)],
 [Runde 9, Feld 26, wenn von 0 F/R direkt auf 2 F/R beschleunigt wird\
@@ -109,24 +111,29 @@ Runde 9, Feld 24, wenn von 0 F/R auf 1 F/R und erst dann auf 2 F/R beschleunigt 
 
  ],
 
-[c)],
+[c)], //fertig
 [$"Runden gesamt" ["Runden"] = ("Streckenlänge" + "Zuglänge" ["Felder"]) / ("Maximale Geschwindigkeit" ["Felder"/"Runde"])$\
   Nahverkehrszug: $(39 + 2) / 3 = 13,67 -> 14 "Runden"$\
   Fernverkehrszug: $(39 + 4) / 5 = 8,6 -> 9 "Runden"$\
   Güterzug: $(39 + 6) / 3 = 15 "Runden"$])
 
-=== Aufgabe 1.2
-=== Vermittlungsziele
-- Geringe Haftreibung von Stahl auf Stahl (anders als Gummi auf Asphalt)
+== Aufgabe 1.2
+=== Vermittlungsziele //fertig
+- Geringe Haftreibung von Stahl auf Stahl (anders als Gummi auf Asphalt) @pachl_systemtechnik_2022[S. 1-3]
   - Wenig Energieverbrauch
   - Lange Bremswege
-- Fahren auf Sicht -> Um Kollisionen zu vermeiden muss ein Zug sehr langsam fahren
-- Straßebahnen fahren im Straßenverkehr auf Sicht
-  - Für besseres Bremsvermögen: Schienen sanden und Magnetschienenbremsen
-    - 1 bis 3 $m/s^2$ negative Beschleunigung (in Braunschweig) //TODO Werte überprüfen
-  - Geringe Geschwindigkeiten - akzeptable Bremsweglänge (aber immernoch länger als bei Autos!)
-- Für Eisenbahnen ist fahren auf Sicht nicht möglich
-  - Die hohen Geschwindigkeiten führen zu zu langen Bremswegen
+- Fahren im Sichtabstand $->$ Um Kollisionen zu vermeiden muss ein Vollbahn-Eisenbahnfahrzeug sehr langsam fahren @pachl_systemtechnik_2022[S. 42-43]
+  - Richtwert: 0,981 $m/s^2$ Bremsverzögerung bei Vollbahnen @pachl_systemtechnik_2022[S. 2]
+    - Daraus ergeben sich z.B. Bremswege von ca. 100m (50km/h), 190 (70km/h) oder 1000m(160km/h)
+    - Die exakte Bremsverzögerung hängt von den eingesetzen Bremsen ab 
+- Straßebahnen fahren im Straßenverkehr auf Sicht @pachl_systemtechnik_2022[S. 42-43]
+  - Deswegen werden höhere Bremsverzögerungen gefordert
+    - Richtwert für Betriebsbremsungen: 1,2 $m/s^2$ Bremsverzögerung @reinhardt_offentlicher_2018[S. 261]
+    - Richtwert für Gefahrbremsungen: 2,5 - 2,7 $m/s^2$ Bremsverzögerung @noauthor_strasenbahn-bau-_1987[§36 Abs. 6 Nr.3]
+      - Daraus ergeben sich z.B. Bremswege von ca. 40m (50km/h) oder 70m (70km/h) @noauthor_strasenbahn-bau-_1987[§36 Abs. 6 Nr.3]. Das sind deutlich längere (Gefahren)bremswege als bei Autos.
+  - Für besseres Bremsvermögen werden Schienen gesandet @kache_fahrdynamik_2024[S. 164] und Magnetschienenbremsen benutzt @kache_fahrdynamik_2024[S. 295]
+
+$=>$ Für Vollbahnen ist fahren auf Sicht nicht möglich, weil die Bremswege bei hohen Geschwindigkeiten zu lang sind.
 
 === Lösung
 
@@ -170,30 +177,34 @@ Deswegen muss der Zug auf Feld 1 das Hindernis sehen können, um rechtzeitig anz
 $"nötige Sichtweite" = "Bremsweg" + ("aktuelle Geschwindigkeit" - 1) + 1 = "Bremsweg" + "aktuelle Geschwindigkeit"$\
 (Die +1 wird für das Feld auf dem das Hindernis liegt benötigt.)
 
-In der Realität kann sich natürlich in jedem Moment dazu entschieden werden zu bremsen. Die Fahrt in voller Geschwindigkeit, kann allerdings mit der Reaktionszeit verglichen werden. 
+In der Realität kann sich natürlich in jedem Moment dazu entschieden werden zu bremsen. Die Fahrt in voller Geschwindigkeit kann allerdings mit der Reaktionszeit verglichen werden. 
  ])
 
 = Zugfolgesicherung
-*Überleitung zu diesem Kapitel*\
-Fahren auf Sicht ist bei hohen Geschwindigkeiten nicht möglich.
+== Überleitung zu diesem Kapitel
+Fahren auf Sicht ist bei hohen Geschwindigkeiten nicht möglich. @pachl_systemtechnik_2022[S. 39]
 - _Wie können Auffahrunfälle verhindert werden?_
-    - Fahren im festen Raumabstand
-    - Blockeinteilung
-- _Welche Bedingungen müssen erfüllt sein, damit ein Zug in einen Block einfahren darf?_
-  - Der vorrausfahrende Zug muss den Block vollständig verlassen haben
-  - Der vorrausfahrende Zug muss durch ein Halt zeigendes Signal gedeckt werden
+    - Fahren im festen Raumabstand (Einteilung der Strecke in Blockabschnitte) @pachl_systemtechnik_2022[S. 41-45]
+- _Welche Bedingungen müssen erfüllt sein, damit ein Zug in einen Block einfahren darf?_ (#text(fill: red)[Bewusst unvollständig])
+  - Der Blockabschnitt muss frei sein. @pachl_systemtechnik_2022[S. 44]
+  - Ein vorausgefahrener Zug muss durch ein Halt zeigendes Signal gedeckt sein. @pachl_systemtechnik_2022[S. 44]
+  - #text(fill: red)[Eine Bedingung fehlt noch, dafür muss vorher aber ein weiteres Element eingeführt werden\ $->$ folgt weiter unten]
 - _Wie kann eine Fahrt in einen Block autorisiert werden?_
-  - über Hauptsignale (signalgeführter Betrieb)
-  - (schriftliche Weisungen bei nicht signalgeführtem Betrieb)
+  - über mündliche oder fernmündliche Fahrerlaubnis (Zugleitbetrieb) @pachl_systemtechnik_2022[S. 45]
+  - über ortsfeste Signale (signalgeführter Betrieb) @pachl_systemtechnik_2022[S. 45] $->$ Prinzip des SigLabs
+  - über Führerraumanzeigen (anzeigegeführter Betrieb) $->$ Gesetzlich vorgeschrieben für Geschwindigkeiten $>160 "km/h"$ @pachl_systemtechnik_2022[S. 45-46]
 - Ein Halt zeigendes Hauptsignal darf nicht überfahren werden. Der Bremsweg ist aber länger als die Sichtweite. _Wie erfährt der Lokführer rechtzeititg von dem Halt zeigenden Hauptsignal?_
-  - Vorsignale
-  - Was ist der Vorsignalabstand im SigLab?
+  - Vorsignale @pachl_systemtechnik_2022[S. 50]
+  - _Was ist der Vorsignalabstand im SigLab?_
     - 10 Felder
-- _Wie wird technisch festgestellt, dass ein Zug in einen Block ein- und vollständig wieder ausgefahren ist?_
+- _Wie kann technisch festgestellt werden, dass ein Zug in einen Block ein- und vollständig wieder ausgefahren ist?_ #text(fill: purple)[hier weitermachen - quelle für Achszähler und Gleisstromkreis finden]
   - Signalzugschlusstelle (Achszähler oder Gleisstromkreise)
   - Werden leicht hinter dem Hauptsignal angeordnet (50m, im Spiel ein Feld)
   - Damit ein Block frei ist muss nicht nur der Block, sondern auch den dahinterliegenden Schutzabschnitt komplett freigefahren sein. 
-
+- _Welche Bedingungen müssen erfüllt sein, damit ein Zug in einen Block einfahren darf?_
+  - Der Blockabschnitt muss frei sein. @pachl_systemtechnik_2022[S. 44]
+  - Der Abschnitt zwischen dem Signal am Ende des Blockabschnitts und der Signalzugschlussstelle muss frei sein. @pachl_systemtechnik_2022[S. 44]
+  - Ein vorausgefahrener Zug muss durch ein Halt zeigendes Signal gedeckt sein. @pachl_systemtechnik_2022[S. 44]
 
 
 - Fernverkehrszug: 160km/h PZB, 200 km/h nur bei LZB (sonst ist Vorsignalabstand für langsamere Züge (z.B. Güterverkehr) unpraktisch)\
@@ -247,6 +258,10 @@ Folien
 == Aufgabe 2.2
 === Vermittlungsziele
 === Lösungen
+
+
+#bibliography("SigLab - Schulung.bib",style: "apa")
+
 
 #pagebreak()
 = Notizen erste Schulung
@@ -324,7 +339,7 @@ Für mich:
 
 #pagebreak()
 
-= Vermittlung der zweiten Schulung
+= Notizen der zweiten Schulung
 
 8:00 beginn
 8:30 Tutorial aufgebaut, mti Runde 1 des Tutorials begonnen
