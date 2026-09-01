@@ -53,7 +53,7 @@ Ab hier sollte keine Einführung mehr nötig sein. Das Handbuch führt durch das
 === Vermittlungsziele
 - Spieldynamik kennenlernen
   - Der Nahverkehrszug kann direkt auf 2 F/R beschleunigen
-- Berechnung von Bremsweglänge
+- Berechnung von Bremsweglänge   
 - Die Infrastruktur vor und nach einem Betrachtungsraum ist beliebig. Ein Zug kann auch mit voller Geschwindigkeit in den Betrachtungsraum einbrechen.
 - Je länger ein Zug ist, desto mehr Runden werden benötigt, bis der gesamte Zug die Strecke verlassen hat.
 
@@ -206,19 +206,33 @@ Fahren auf Sicht ist bei hohen Geschwindigkeiten nicht möglich.
 
 
 == Vermittlungsziele
+Powerpoint:
+- PRinzipien der Vorsignalisierung
+- Streckenbelegung eines Zuges
 - Sperrzeiten - die verschiedenen Anteile
   - alles fix außer Blockbelegungszeit
   - je kürzer die blöcke desto geringer der Kapazitätsgewinn bei weiterer verkürzung
+- Kapazitätsverlust durch inhomogene Geschwindigkeiten
+- Pzb MAgnete & Bremskurven
+- LZB Führerraumanzeige
+
+
+
+
+
 - HI Signal für Blöcke kürzer Vorsignalabstand
 - HV und KS Signal
+
+keine Powerpoint 
 - Blocklogik
-- Warum SZS hinter dem Hauptsignal? - Dampflok sitzt man hinten in der Lok
+- Warum SZS hinter dem Hauptsignal?  
+  - Dampflok sitzt man hinten in der Lok
 - Abwägung Vorsignalabstand -> mischverkehr einheitlich zum stehen kommen
   - realität: Wie viel Vorsignalabstand kann man haben? *überarbeiten*
 - PZB (Signale) nur bis 160 km/h. Schneller FÜhrerraumanzeige - LZB
 - PZB Magnete position und Kapazität?
-- Kapazitätsverlust durch inhomogene Geschwindigkeiten
-- Streckenbelegung eines Zuges
+
+
 
 Folien
 - Bestandteile einer Sperrzeit
@@ -307,3 +321,17 @@ Paper zu
 Für mich:
 - was ist der Betriebliche Unterschied eines deutschen BAhnhofs zu anderen Konzepten/ ländern?
 - Was gibt es bis KApitel 2 für Unterschiede in die Schweiz/ Österreich/ Frankereich und andere Länder
+
+#pagebreak()
+
+= Vermittlung der zweiten Schulung
+
+8:00 beginn
+8:30 Tutorial aufgebaut, mti Runde 1 des Tutorials begonnen
+
+8:45 Aufgabe 1 Infrastruktur aufbauen
+
+
+9:35 Mit dem ersten Kapitel fertig
+
+wie definieren sich 3 Vollständige 
