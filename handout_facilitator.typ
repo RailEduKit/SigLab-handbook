@@ -197,66 +197,94 @@ Fahren auf Sicht ist bei hohen Geschwindigkeiten nicht möglich. @pachl_systemte
   - Vorsignale @pachl_systemtechnik_2022[S. 50]
   - _Was ist der Vorsignalabstand im SigLab?_
     - 10 Felder
-- _Wie kann technisch festgestellt werden, dass ein Zug in einen Block ein- und vollständig wieder ausgefahren ist?_ #text(fill: purple)[hier weitermachen - quelle für Achszähler und Gleisstromkreis finden]
-  - Signalzugschlusstelle (Achszähler oder Gleisstromkreise)
-  - Werden leicht hinter dem Hauptsignal angeordnet (50m, im Spiel ein Feld)
-  - Damit ein Block frei ist muss nicht nur der Block, sondern auch den dahinterliegenden Schutzabschnitt komplett freigefahren sein. 
+- _Wie kann technisch festgestellt werden, dass ein Zug in einen Block ein- und vollständig wieder ausgefahren ist?_
+  - Gleisfreimeldeanlage (Achszähler oder Gleisstromkreise) @pachl_systemtechnik_2022[S. 73 - 75]
+  - Elemente einer Gleisfreimeldeanlage können als Signalzugschlussstelle dienen.
+  - Sie werden leicht hinter dem Hauptsignal angeordnet @pachl_systemtechnik_2022[S. 44-45] (im Spiel ein Feld) 
+  - Daraus ergibt sich die letzte Bedingung, die erfüllt sein muss, damit ein Block befahren werden darf
 - _Welche Bedingungen müssen erfüllt sein, damit ein Zug in einen Block einfahren darf?_
   - Der Blockabschnitt muss frei sein. @pachl_systemtechnik_2022[S. 44]
-  - Der Abschnitt zwischen dem Signal am Ende des Blockabschnitts und der Signalzugschlussstelle muss frei sein. @pachl_systemtechnik_2022[S. 44]
   - Ein vorausgefahrener Zug muss durch ein Halt zeigendes Signal gedeckt sein. @pachl_systemtechnik_2022[S. 44]
+  - Der Abschnitt zwischen dem Signal am Ende des Blockabschnitts und der Signalzugschlussstelle muss frei sein. @pachl_systemtechnik_2022[S. 44]
 
 
-- Fernverkehrszug: 160km/h PZB, 200 km/h nur bei LZB (sonst ist Vorsignalabstand für langsamere Züge (z.B. Güterverkehr) unpraktisch)\
--> zu den Vermittlungszielen der ersten Aufgabe zuordnen
+
 
 == Hinweise
-- erst beide Züge bewegen, dann auf die Sicherungstechnik achten
-- Blockabstand und Vorsignalabstand nicht verwechseln
-
-
-
-== Vermittlungsziele
-Powerpoint:
-- PRinzipien der Vorsignalisierung
-- Streckenbelegung eines Zuges
-- Sperrzeiten - die verschiedenen Anteile
-  - alles fix außer Blockbelegungszeit
-  - je kürzer die blöcke desto geringer der Kapazitätsgewinn bei weiterer verkürzung
-- Kapazitätsverlust durch inhomogene Geschwindigkeiten
-- Pzb MAgnete & Bremskurven
-- LZB Führerraumanzeige
-
-
-
-
-
-- HI Signal für Blöcke kürzer Vorsignalabstand
-- HV und KS Signal
-
-keine Powerpoint 
-- Blocklogik
-- Warum SZS hinter dem Hauptsignal?  
-  - Dampflok sitzt man hinten in der Lok
-- Abwägung Vorsignalabstand -> mischverkehr einheitlich zum stehen kommen
-  - realität: Wie viel Vorsignalabstand kann man haben? *überarbeiten*
-- PZB (Signale) nur bis 160 km/h. Schneller FÜhrerraumanzeige - LZB
-- PZB Magnete position und Kapazität?
-
-
-
-Folien
-- Bestandteile einer Sperrzeit
-- Sperrzeitentreppe
 
 
 
 == Aufgabe 2.1
+=== Hinweise
+- Blockabstand und Vorsignalabstand nicht verwechseln
 === Vermittlungsziele
+*Wahl des Vorsignalabstands zum Hauptsignal*\
+- Fernverkehrszug: 160km/h PZB, 200 km/h nur bei LZB (sonst ist Vorsignalabstand für langsamere Züge (z.B. Güterverkehr) unpraktisch)\
+-> zu den Vermittlungszielen der ersten Aufgabe zuordnen
+
+- Abwägung Vorsignalabstand -> mischverkehr einheitlich zum stehen kommen
+  - realität: Wie viel Vorsignalabstand kann man haben? *überarbeiten*
+  - PZB (Signale) nur bis 160 km/h. Schneller FÜhrerraumanzeige - LZB
+
+//TODO Die Abwägung ist auch in Pachls buch zu finden
+
+
+*Prinzipien der Vorsignalisierung (Unterschied Vorsignalabstand und Blocklänge)*\
+- Unterschied zwischen dem Vorsignalabstand zum Hauptsignal und der Blocklänge
+- Einabschnittssignalisierung @pachl_systemtechnik_2022[S. 50]
+  - Vorsignalabstand $<$ Blocklänge
+  - Das Hauptsignal zeigt nur Informationen, die für den unmittelbar folgenden Blockabschnitt gültig sind.
+  - Deswegen benötigt jedes Hauptsignal ein Vorsignal, dass das Signalbild des Hauptsignals vorankündigt.
+  - HV-Signalsystem in Deutschland
+  - Auch das SigLab benutzt eine Einabschnittssignalisierung
+  - Vorsignalabstand = Blocklänge
+    - Das Vorsignal und das rückliegende Hauptsignal werden am selben Ort angeordnet.
+- Mehrabschnittssignalisierung @pachl_systemtechnik_2022[S. 50]
+  - Das Hauptsignal zeigt Informationen, die für mindestens zwei Blockabschnitte gültig sind
+  - Ist der Vorsignalabstand $>=$ der Blocklänge werden keine Vorsignale Benötigt, da die Hauptsignale diese Funktion übernehmen.
+  - Zweiabschnittssignalisierung @pachl_systemtechnik_2022[S. 50]
+    - Ks-Signalsystem in Deutschland
+    - Ist der Vorsignalabstand $<$ die Blocklänge ist eine Einabschnittssignalisierung Leistungsfähiger als eine Mehrabschnittssignalisierung. Deswegen ist es beim Ks-Signalsystem möglich in die Einabschnittssignalisierung zu wechseln @pachl_systemtechnik_2022[S. 52].
+  - Dreiabschnittssignalisierung @pachl_systemtechnik_2022[S. 50]
+    - Hl-Signalsystem (L gesprochen) in Deutschland als Altsystem der DDR.
+
+#figure(
+  image("images/pachl_systemtechnik_2022-prinzipien der Vorsignalisierung.png"),
+  caption: [Vorsignalabstand und Blocklänge bei verschiedenen Vorsignalisierungen\ @pachl_systemtechnik_2022[S. 51]]
+  )
+
+
+
+- HV Signalsystem (aussehen bei Blockabstand > Vorsignalabstand, aussehen bei Blockabstand = Vorsignalabstand)
+- KS Signalsystem (KEine Visuelle Unterscheidung zwischen Haupt- und Vorsignal (MAstschilder!))
+- Hl (L gesprochen) Signalsystem für Blockabstand < Vorsignalabstand
+
+// TODO Bilder zu den jeweiligen Signalsystemen finden. RIL 301 lässt sich gut zitieren. Aber HV Signalsystem kommt nicht so richtig vor - Kombination mit Haupt- und Vorsignal nicht zu finden.
+
+*Sperrzeit eines Blockabschnitts*
+- Sperrzeiten - die verschiedenen Anteile
+  - alles fix außer Blockbelegungszeit
+  - je kürzer die blöcke desto geringer der Kapazitätsgewinn bei weiterer verkürzung
+// TODO Pachls buch nutzen - S.52
+
+
+
 === Lösungen
+- Minimale Blocklänge = Vorsignalabstand (da Einabschnittssignalisierung)
+
+
+//TODO zu klären: Was sind 3 vollständige Blöcke? Mit welchem Signal beginnt der erste vollständige Block und womit endet der letzte Vollständige Block?
+
+
 
 == Aufgabe 2.2
+=== Hinweise
+- erst beide Züge bewegen, dann auf die Sicherungstechnik achten
 === Vermittlungsziele
+- Streckenbelegung eines Zuges
+- Kapazitätsverlust durch inhomogene Geschwindigkeiten
+- LZB Führerraumanzeige
+- Exkurs Pzb MAgnete & Bremskurven
 === Lösungen
 
 
